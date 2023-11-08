@@ -1,0 +1,26 @@
+package com.anish.quizapp.model;
+
+import lombok.Data;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@Data
+public class Question {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    private String category;
+    private String questionTitle;
+    private String option1;
+    private String option2;
+    private String option3;
+    private String option4;
+    private String rightAnswer;
+    private String difficultylevel;
+
+
+
+}
