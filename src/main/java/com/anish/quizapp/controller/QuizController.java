@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
     public class QuizController {
     @Autowired
     QuizService quizService;
-        @PostMapping("/create")
+        @PostMapping("/createQuiz")
         public ResponseEntity<String>createQuiz(@RequestParam String category, @RequestParam int numQ , @RequestParam String title){
             return quizService.createQuiz(category,numQ,title);
 
